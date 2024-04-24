@@ -1,0 +1,30 @@
+{
+  "name": "Ivena-homepage",
+  "version": "1.0.0",
+  "description": "Zhenyu's website",
+  "scripts": {
+    "dev": "next dev -H 0.0.0.0",
+    "build": "next build",
+    "prestart": "prettier --write .",
+    "lint": "next lint"
+  },
+  "keywords": [],
+  "author": "Zhenyu Huang<huangzhy77@outlook.com>",
+  "license": "MIT",
+  "dependencies": {
+    "@chakra-ui/react": "^2.8.2",
+    "@emotion/react": "^11.11.4",
+    "@emotion/style": "^0.8.0",
+    "@emotion/styled": "^11.11.5",
+    "framer-motion": "^11.1.7",
+    "next": "^14.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.163.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.57.0",
+    "eslint-config-next": "^14.2.2",
+    "prettier": "^3.2.5"
+  }
+}
