@@ -11,8 +11,9 @@ const Page = () => {
       </Box>
       <Box display={{ md: 'flex' }}>
         <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title"></Heading>
-          Zhenyu Huang
+          <Heading as="h2" variant="page-title">
+            Zhenyu Huang
+          </Heading>
           <p>Developer with Physics Background</p>
         </Box>
       </Box>
