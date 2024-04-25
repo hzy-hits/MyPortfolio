@@ -1,1 +1,8 @@
-{}
+{
+  "components/layouts/main.js -> ../SolarSystem/getSolarSystem.js": {
+    "id": "components/layouts/main.js -> ../SolarSystem/getSolarSystem.js",
+    "files": [
+      "static/chunks/components_SolarSystem_getSolarSystem_js.js"
+    ]
+  }
+}

@@ -14,6 +14,9 @@ import {
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import Image from 'next/image'
+
+//import SolarSystem from '../components/SolarSystem/getSolarSystem.js'
+
 const Page = () => {
   return (
     <Container>

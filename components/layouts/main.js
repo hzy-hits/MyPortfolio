@@ -1,8 +1,13 @@
 import Head from 'next/head'
+import dynamic from 'next/dynamic'
 import SpinningCube from '../spinning_cube/spining_cube.js'
 import NavBar from '../navgabar.js'
 import { Flex } from '@chakra-ui/react'
 import { Box, Container, useColorModeValue } from '@chakra-ui/react'
+
+const SolarSystem = dynamic(() => import('../SolarSystem/getSolarSystem.js'), {
+  ssr: false
+})
 const Main = ({ children, router }) => {
   const bgColor = useColorModeValue('#f0e7db', '#202023')
   return (
@@ -23,7 +28,8 @@ const Main = ({ children, router }) => {
             position="relative"
             bg={bgColor}
           >
-            <SpinningCube />
+            {/* <SpinningCube /> */}
+            <SolarSystem />
           </Box>
         </Flex>
 
