@@ -1,11 +1,31 @@
-import { Container, Box, Heading } from '@chakra-ui/react'
-import SpiningCube from '../components/spinning_cube/spining_cube.js'
+import NextLink from 'next/link'
+import { BioSection, BioYear } from '../components/bio'
+import {
+  Link,
+  Container,
+  Heading,
+  Box,
+  SimpleGrid,
+  Button,
+  List,
+  ListItem,
+  useColorModeValue
+} from '@chakra-ui/react'
+import Section from '../components/section'
+import Paragraph from '../components/paragraph'
+import Image from 'next/image'
 const Page = () => {
   return (
     <Container>
-      <SpiningCube />
-      <Box broderRadius="lg" bg="green" p="5" mb={6} align="center">
-        Hello, I&apos;m a computaional science master's student at Brown
+      <Box
+        borderRadius="lg"
+        mb={6}
+        p={3}
+        textAlign="left"
+        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
+        css={{ backdropFilter: 'blur(10px)' }}
+      >
+        Hi, I&apos;m a computaional science master's student at Brown
         University, transitioning from physics with AI experience to pursue a
         career as a software development engineer.
       </Box>
@@ -16,7 +36,64 @@ const Page = () => {
           </Heading>
           <p>Developer with Physics Background</p>
         </Box>
+        <Box
+          flexshrink={0}
+          mt={{ base: 4, md: 0 }}
+          ml={{ md: 6 }}
+          align="center"
+        >
+          <Box
+            borderColor="whiteAlpha.800"
+            borderWidth={2}
+            borderStyle="solid"
+            w="100px"
+            h="100px"
+            display="inline-block"
+            borderRadius="full"
+            overflow="hidden"
+            position="relative"
+          >
+            <Image
+              src="/images/profile_kitty.jpg"
+              alt="Profile image"
+              objectFit="cover"
+              overflow="hidden"
+              layout="fill"
+            />
+          </Box>
+        </Box>
       </Box>
+      <Section delay={0.1}>
+        <Heading as="h3" variant="section-title">
+          Bio
+        </Heading>
+        <BioSection>
+          <BioYear>2000</BioYear>
+          Born in Guangzhou (广州), China.
+        </BioSection>
+        <BioSection>
+          <BioYear>2023</BioYear>
+          Completed the Bachelor&apos;s Program in physics at Sun Yat-sen
+          University (中山大学).
+        </BioSection>
+        <BioSection>
+          <BioYear>2023 to present</BioYear>Pursuing a master&apos;s degree in
+          computational science at Brown University.
+        </BioSection>
+      </Section>
+      <Section delay={0.2}>
+        <Heading as="h3" variant="section-title">
+          Work
+        </Heading>
+        <Paragraph>Zhenyu</Paragraph>
+        /*
+        <Box align="center" my={4}>
+          <Button as={NextLink} href="/works" scroll={false} colorScheme="teal">
+            My portfolio
+          </Button>
+        </Box>
+        */
+      </Section>
     </Container>
   )
 }

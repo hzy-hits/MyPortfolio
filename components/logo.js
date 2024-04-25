@@ -8,33 +8,32 @@ const LogoBox = styled.span`
   font-size: 18px;
   display: inline-flex;
   align-items: center;
-  height: 30px; // Corrected spelling here
-  line-height: 20px;
+  height: 60px;
+  line-height: 40px;
   padding: 10px;
 
   &:hover img {
-    transform: rotate(20deg);
+    transform: rotate(45deg);
   }
 `
 
 const Logo = () => {
-  const particleIconSrc = useColorModeValue('/atom.png', '/atom_dark.png')
+  const imageSuffix = useColorModeValue('', '_dark')
+  const particleIconSrc = `/images/atom${imageSuffix}.png`
 
   return (
-    <Link href="/" passHref>
-      <a>
-        <LogoBox>
-          <Image src={particleIconSrc} width={20} height={20} alt="logo" />
-          <Text
-            color={useColorModeValue('gray.800', 'whiteAlpha.900')}
-            fontFamily="M PLUS Rounded 1c"
-            fontWeight="bold"
-            ml={3}
-          >
-            Zhenyu Huang
-          </Text>
-        </LogoBox>
-      </a>
+    <Link href="/" scroll={false}>
+      <LogoBox>
+        <Image src={particleIconSrc} width={50} height={50} alt="logo" />
+        <Text
+          color={useColorModeValue('gray.800', 'whiteAlpha.900')}
+          fontFamily='M PLUS Rounded 1c",sans-serif'
+          fontWeight="bold"
+          ml={3}
+        >
+          Zhenyu Huang
+        </Text>
+      </LogoBox>
     </Link>
   )
 }
