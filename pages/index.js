@@ -1,14 +1,14 @@
-import NextLink from 'next/link'
+import _NextLink from 'next/link'
 import { BioSection, BioYear } from '../components/bio'
 import {
-  Link,
+  _Link,
   Container,
   Heading,
   Box,
-  SimpleGrid,
-  Button,
-  List,
-  ListItem,
+  _SimpleGrid,
+  _Button,
+  _List,
+  _ListItem,
   useColorModeValue
 } from '@chakra-ui/react'
 import Section from '../components/section'
@@ -25,7 +25,7 @@ const Page = () => {
         bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
         css={{ backdropFilter: 'blur(10px)' }}
       >
-        Hi, I&apos;m a computaional science master's student at Brown
+        Hi, I&apos;m a computaional science master&apos;s student at Brown
         University, transitioning from physics with AI experience to pursue a
         career as a software development engineer.
       </Box>
@@ -86,13 +86,6 @@ const Page = () => {
           Work
         </Heading>
         <Paragraph>Zhenyu</Paragraph>
-        /*
-        <Box align="center" my={4}>
-          <Button as={NextLink} href="/works" scroll={false} colorScheme="teal">
-            My portfolio
-          </Button>
-        </Box>
-        */
       </Section>
     </Container>
   )
