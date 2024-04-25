@@ -54,7 +54,7 @@ const Page = () => {
             position="relative"
           >
             <Image
-              src="/images/profile_kitty.jpg"
+              src="/images/profile_kitty.JPG"
               alt="Profile image"
               objectFit="cover"
               overflow="hidden"
