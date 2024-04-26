@@ -1,9 +1,10 @@
 import Head from 'next/head'
 import NavBar from '../navgabar.js'
-import { Box, Container } from '@chakra-ui/react'
+import { Box, Container, useColorModeValue } from '@chakra-ui/react'
 import Footer from '../footer.js'
 
 const Main = ({ children, router }) => {
+  const _bgColor = useColorModeValue('#f0e7db', '#202023')
   return (
     <Box as="main" pb={8}>
       <Head>

@@ -1,4 +1,5 @@
-import { Box, Container, Flex } from '@chakra-ui/react'
+import React from 'react'
+import { Box, Container, Flex, useColorModeValue } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 
 const SpinningCube = dynamic(
@@ -7,7 +8,8 @@ const SpinningCube = dynamic(
     ssr: false
   }
 )
-const projects = () => {
+const Projects = () => {
+  const bgColor = useColorModeValue('#f0e7db', '#202023')
   return (
     <Container maxW="container.md" pt={14}>
       <Flex align="center" justify="center">
@@ -26,4 +28,4 @@ const projects = () => {
     </Container>
   )
 }
-export default projects
+export default Projects
