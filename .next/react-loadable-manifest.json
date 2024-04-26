@@ -4,11 +4,5 @@
     "files": [
       "static/chunks/components_SolarSystem_getSolarSystem_js.js"
     ]
-  },
-  "pages\\projects.js -> ../components/spinning_cube/spining_cube.js": {
-    "id": "pages\\projects.js -> ../components/spinning_cube/spining_cube.js",
-    "files": [
-      "static/chunks/components_spinning_cube_spining_cube_js.js"
-    ]
   }
 }
