@@ -1,97 +1,28 @@
-import _NextLink from 'next/link'
-import { BioSection, BioYear } from '../components/bio'
-import {
-  _Link,
-  Container,
-  Heading,
-  Box,
-  _SimpleGrid,
-  _Button,
-  _List,
-  _ListItem,
-  useColorModeValue
-} from '@chakra-ui/react'
-import Section from '../components/section'
-import Paragraph from '../components/paragraph'
-import Image from 'next/image'
-
+import dynamic from 'next/dynamic'
+import { Container, Box } from '@chakra-ui/react'
+import { useEffect } from 'react'
+import { useColorMode } from '@chakra-ui/react'
+const SolarSystem = dynamic(() => import('../components/SolarSystem/getSolarSystem.js'), {
+    ssr: false
+})
 //import SolarSystem from '../components/SolarSystem/getSolarSystem.js'
 
 const Page = () => {
-  return (
-    <Container>
-      <Box
-        borderRadius="lg"
-        mb={6}
-        p={3}
-        textAlign="left"
-        bg={useColorModeValue('whiteAlpha.500', 'whiteAlpha.200')}
-        css={{ backdropFilter: 'blur(10px)' }}
-      >
-        Hi, I&apos;m a computaional science master&apos;s student at Brown
-        University, transitioning from physics with AI experience to pursue a
-        career as a software development engineer.
-      </Box>
-      <Box display={{ md: 'flex' }}>
-        <Box flexGrow={1}>
-          <Heading as="h2" variant="page-title">
-            Zhenyu Huang
-          </Heading>
-          <p>Developer with Physics Background</p>
-        </Box>
-        <Box
-          flexshrink={0}
-          mt={{ base: 4, md: 0 }}
-          ml={{ md: 6 }}
-          align="center"
-        >
-          <Box
-            borderColor="whiteAlpha.800"
-            borderWidth={2}
-            borderStyle="solid"
-            w="100px"
-            h="100px"
-            display="inline-block"
-            borderRadius="full"
-            overflow="hidden"
-            position="relative"
-          >
-            <Image
-              src="/images/profile_kitty.JPG"
-              alt="Profile image"
-              objectFit="cover"
-              overflow="hidden"
-              layout="fill"
-            />
-          </Box>
-        </Box>
-      </Box>
-      <Section delay={0.1}>
-        <Heading as="h3" variant="section-title">
-          Bio
-        </Heading>
-        <BioSection>
-          <BioYear>2000</BioYear>
-          Born in Guangzhou (广州), China.
-        </BioSection>
-        <BioSection>
-          <BioYear>2023</BioYear>
-          Completed the Bachelor&apos;s Program in physics at Sun Yat-sen
-          University (中山大学).
-        </BioSection>
-        <BioSection>
-          <BioYear>2023 to present</BioYear>Pursuing a master&apos;s degree in
-          computational science at Brown University.
-        </BioSection>
-      </Section>
-      <Section delay={0.2}>
-        <Heading as="h3" variant="section-title">
-          Work
-        </Heading>
-        <Paragraph>Zhenyu</Paragraph>
-      </Section>
-    </Container>
-  )
+    const { colorMode, setColorMode } = useColorMode();
+    useEffect(() => {
+
+        if (colorMode !== 'dark') {
+
+            setColorMode('dark');
+        }
+    }, [colorMode, setColorMode]);
+    return (
+        <Container maxW="100vw" maxH="100vh" p={0} centerContent padding="0" margin="0" >
+            <Box w="100%" h="100%" position="absolute" top="0" left="0" zIndex="-1">
+                <SolarSystem />
+            </Box>
+        </Container>
+    )
 }
 
 export default Page

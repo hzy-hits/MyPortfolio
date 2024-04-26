@@ -1,8 +1,12 @@
 {
-  "components/layouts/main.js -> ../SolarSystem/getSolarSystem.js": {
-    "id": "components/layouts/main.js -> ../SolarSystem/getSolarSystem.js",
+  "pages\\index.js -> ../components/SolarSystem/getSolarSystem.js": {
+    "id": "pages\\index.js -> ../components/SolarSystem/getSolarSystem.js",
     "files": [
       "static/chunks/components_SolarSystem_getSolarSystem_js.js"
     ]
+  },
+  "pages\\projects.js -> ../components/spinning_cube/spining_cube.js": {
+    "id": "pages\\projects.js -> ../components/spinning_cube/spining_cube.js",
+    "files": []
   }
 }
