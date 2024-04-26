@@ -6,31 +6,30 @@ import { Analytics } from '@vercel/analytics/react'
 import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps, router }) {
-    return (
-        <ChakraProvider theme={theme}>
-            <Fonts />
-            <Website Component={Component} pageProps={pageProps} router={router} />
-            <Analytics />
-        </ChakraProvider>
-    )
+  return (
+    <ChakraProvider theme={theme}>
+      <Fonts />
+      <Website Component={Component} pageProps={pageProps} router={router} />
+      <Analytics />
+    </ChakraProvider>
+  )
 }
 
-
 function Website({ Component, pageProps, router }) {
-    const { setColorMode } = useColorMode();
+  const { setColorMode } = useColorMode()
 
-    useEffect(() => {
-        const savedColorMode = localStorage.getItem('colorMode');
-        if (savedColorMode) {
-            setColorMode(savedColorMode);
-        }
-    }, [setColorMode]);
+  useEffect(() => {
+    const savedColorMode = localStorage.getItem('colorMode')
+    if (savedColorMode) {
+      setColorMode(savedColorMode)
+    }
+  }, [setColorMode])
 
-    return (
-        <Layout router={router}>
-            <Component {...pageProps} key={router.route} />
-        </Layout>
-    )
+  return (
+    <Layout router={router}>
+      <Component {...pageProps} key={router.route} />
+    </Layout>
+  )
 }
 
 export default MyApp

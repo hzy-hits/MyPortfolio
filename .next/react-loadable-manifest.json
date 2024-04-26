@@ -7,6 +7,8 @@
   },
   "pages\\projects.js -> ../components/spinning_cube/spining_cube.js": {
     "id": "pages\\projects.js -> ../components/spinning_cube/spining_cube.js",
-    "files": []
+    "files": [
+      "static/chunks/components_spinning_cube_spining_cube_js.js"
+    ]
   }
 }
