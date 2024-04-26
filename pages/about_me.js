@@ -1,9 +1,8 @@
 import Section from '../components/section'
 import Paragraph from '../components/paragraph'
 import Image from 'next/image'
-import _NextLink from 'next/link'
 import { ChevronRightIcon } from '@chakra-ui/icons'
-import { BioSection, BioYear } from '../components/bio'
+import { BioYear } from '../components/bio'
 import {
     Link,
     Stack,
@@ -23,13 +22,13 @@ import {
 } from '@chakra-ui/react'
 import { IoLogoLinkedin, IoLogoGithub } from 'react-icons/io5'
 import { IoIosMail, } from 'react-icons/io'
-import NextLink from 'next/link'
+
 
 const EducationEntry = ({ schoolName, program, period, logoUrl }) => {
     const bgColor = useColorModeValue('#f0e7db', '#202023');
     const textColor = useColorModeValue('gray.800', 'whiteAlpha.900');
     const _borderColor = useColorModeValue('gray.300', 'gray.600');
-    const textStyle = {
+    const _textStyle = {
         fontFamily: '"Helvetica Neue", Arial, sans-serif',
         fontWeight: "normal",
     };

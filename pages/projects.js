@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 import { Box, Container, Flex, useColorModeValue, SimpleGrid, Heading } from '@chakra-ui/react'
 import dynamic from 'next/dynamic'
 import { WorkGridItem } from '../components/grid-items'
